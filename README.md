@@ -1,9 +1,8 @@
 
-## Hello welcome to [Wellness Merchandise Shop]().
+## Hello welcome to [Wellness Merchandise Shop](https://wellness-merchandise-shop.netlify.app/).
 
 ## Table of Contents
 
-- [Live Server](#live-server)
 
 
 
