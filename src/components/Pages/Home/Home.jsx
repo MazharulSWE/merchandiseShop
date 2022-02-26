@@ -12,7 +12,7 @@ import Reviews from "./Reviews/Reviews";
 const Home = () => {
   const history = useHistory();
   useEffect(() => {
-    document.title = "Home | Lightwars";
+    document.title = "Home | Wellness";
   }, []);
 
   return (

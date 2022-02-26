@@ -81,6 +81,9 @@ const useFirebase = () => {
     const unsubscribed = onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user);
+        fetch(`http://localhost:5000/user/${user.email}`)
+        .then((res) => res.json())
+        .then((data) => setAdmin(data));
       } else {
         setUser({});
       }
@@ -90,12 +93,9 @@ const useFirebase = () => {
     return () => unsubscribed;
   }, [auth]);
 
-  useEffect(() => {
-    // fetch(`https://light-wars.herokuapp.com/user/${user.email}`)
-    fetch(`http://localhost:5000/user/${user.email}`)
-      .then((res) => res.json())
-      .then((data) => setAdmin(data));
-  }, [user.email]);
+  // useEffect(() => {
+  //   // fetch(`https://light-wars.herokuapp.com/user/${user.email}`)
+  // }, [user.email]);
 
   return {
     user,
