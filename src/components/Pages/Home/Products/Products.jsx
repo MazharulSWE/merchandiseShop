@@ -9,7 +9,8 @@ const Products = () => {
 
   useEffect(() => {
     // fetch("https://light-wars.herokuapp.com/glasses?limit=6")
-    fetch("http://localhost:5000/glasses?limit=6")
+    // fetch("http://localhost:5000/glasses?limit=6")
+    fetch("https://wellness-merchandise-shop.herokuapp.com/glasses?limit=6")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);

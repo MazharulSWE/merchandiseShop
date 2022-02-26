@@ -29,7 +29,8 @@ const OrderList = () => {
           },
         });
         // fetch(`https://light-wars.herokuapp.com/order/${id}`, {
-        fetch(`http://localhost:5000/order/${id}`, {
+        // fetch(`http://localhost:5000/order/${id}`, {
+        fetch(`https://wellness-merchandise-shop.herokuapp.com/order/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -68,7 +69,8 @@ const OrderList = () => {
             },
           });
           // fetch(`https://light-wars.herokuapp.com/order?id=${order._id}`, {
-          fetch(`http://localhost:5000/order?id=${order._id}`, {
+          // fetch(`http://localhost:5000/order?id=${order._id}`, {
+          fetch(`https://wellness-merchandise-shop.herokuapp.com/order?id=${order._id}`, {
             method: "PUT",
             headers: {
               "content-type": "application/json",
@@ -94,7 +96,8 @@ const OrderList = () => {
 
   useEffect(() => {
     // fetch(`https://light-wars.herokuapp.com/orders`)
-    fetch(`http://localhost:5000/orders`)
+    // fetch(`http://localhost:5000/orders`)
+    fetch(`https://wellness-merchandise-shop.herokuapp.com/orders`)
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, [user.email, isDelete]);

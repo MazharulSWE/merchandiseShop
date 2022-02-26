@@ -20,7 +20,8 @@ const PlaceOrder = () => {
 
   useEffect(() => {
     // fetch(`https://light-wars.herokuapp.com/glass/${id}`)
-    fetch(`http://localhost:5000/glass/${id}`)
+    // fetch(`http://localhost:5000/glass/${id}`)
+    fetch(`https://wellness-merchandise-shop.herokuapp.com/glass/${id}`)
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, [id]);
@@ -53,7 +54,8 @@ const PlaceOrder = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         // fetch("https://light-wars.herokuapp.com/order", {
-        fetch("http://localhost:5000/order", {
+        // fetch("http://localhost:5000/order", {
+        fetch("https://wellness-merchandise-shop.herokuapp.com/order", {
           method: "POST",
           headers: {
             "content-type": "application/json",

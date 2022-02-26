@@ -11,7 +11,8 @@ const Explore = () => {
   useEffect(() => {
     document.title = "Explore | Lightwars";
     // fetch("https://light-wars.herokuapp.com/glasses")
-    fetch("http://localhost:5000/glasses")
+    // fetch("http://localhost:5000/glasses")
+    fetch("https://wellness-merchandise-shop.herokuapp.com/glasses")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);

@@ -48,7 +48,8 @@ const AddService = () => {
         history.push("/dashboard");
 
         // fetch("https://light-wars.herokuapp.com/glasses", {
-        fetch("http://localhost:5000/glasses", {
+        // fetch("http://localhost:5000/glasses", {
+        fetch("https://wellness-merchandise-shop.herokuapp.com/glasses", {
           method: "POST",
           headers: {
             "content-type": "application/json",

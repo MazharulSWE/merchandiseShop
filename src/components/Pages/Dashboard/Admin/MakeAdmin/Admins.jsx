@@ -13,7 +13,7 @@ const Admins = () => {
 
   useEffect(() => {
     // fetch("https://light-wars.herokuapp.com/users")
-    fetch("http://localhost:5000/users")
+    fetch("https://wellness-merchandise-shop.herokuapp.com/users")
       .then((res) => res.json())
       .then((data) => setUsers(data));
   }, [isUpdate]);
@@ -40,7 +40,8 @@ const Admins = () => {
         });
 
         // fetch(`https://light-wars.herokuapp.com/users`, {
-        fetch(`http://localhost:5000/users`, {
+        // fetch(`http://localhost:5000/users`, {
+        fetch(`https://wellness-merchandise-shop.herokuapp.com/users`, {
           method: "PUT",
           headers: {
             "content-type": "application/json",

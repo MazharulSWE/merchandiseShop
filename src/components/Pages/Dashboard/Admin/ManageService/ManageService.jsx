@@ -32,7 +32,8 @@ const ManageService = () => {
 
         history.push("/dashboard");
         // fetch(`https://light-wars.herokuapp.com/glasses/${id}`, {
-        fetch(`http://localhost:5000/glasses/${id}`, {
+        // fetch(`http://localhost:5000/glasses/${id}`, {
+        fetch(`https://wellness-merchandise-shop.herokuapp.com/glasses/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -53,7 +54,8 @@ const ManageService = () => {
 
   useEffect(() => {
     // fetch("https://light-wars.herokuapp.com/glasses")
-    fetch("http://localhost:5000/glasses")
+    // fetch("http://localhost:5000/glasses")
+    fetch("https://wellness-merchandise-shop.herokuapp.com/glasses")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, [isDelete]);

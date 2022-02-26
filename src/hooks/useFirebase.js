@@ -81,7 +81,8 @@ const useFirebase = () => {
     const unsubscribed = onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user);
-        fetch(`http://localhost:5000/user/${user.email}`)
+        // fetch(`http://localhost:5000/user/${user.email}`)
+        fetch(`https://wellness-merchandise-shop.herokuapp.com/user/${user.email}`)
         .then((res) => res.json())
         .then((data) => setAdmin(data));
       } else {

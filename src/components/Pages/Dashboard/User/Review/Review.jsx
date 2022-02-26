@@ -36,7 +36,8 @@ const Review = () => {
     e.preventDefault();
 
     // fetch("https://light-wars.herokuapp.com/review", {
-    fetch("http://localhost:5000/review", {
+    // fetch("http://localhost:5000/review", {
+    fetch("https://wellness-merchandise-shop.herokuapp.com/review", {
       method: "POST",
       headers: {
         "content-type": "application/json",

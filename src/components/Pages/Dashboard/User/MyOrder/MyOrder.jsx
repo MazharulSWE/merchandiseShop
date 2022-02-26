@@ -20,7 +20,8 @@ const MyOrder = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         // fetch(`https://light-wars.herokuapp.com/order/${id}`, {
-        fetch(`http://localhost:5000/order/${id}`, {
+        // fetch(`http://localhost:5000/order/${id}`, {
+        fetch(`https://wellness-merchandise-shop.herokuapp.com/order/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -39,7 +40,8 @@ const MyOrder = () => {
     document.title = "My Orders | Lightwars";
 
     // fetch(`https://light-wars.herokuapp.com/orders?email=${user.email}`)
-    fetch(`http://localhost:5000/orders?email=${user.email}`)
+    // fetch(`http://localhost:5000/orders?email=${user.email}`)
+    fetch(`https://wellness-merchandise-shop.herokuapp.com/orders?email=${user.email}`)
       .then((res) => res.json())
       .then((data) => setMyOrders(data));
   }, [user.email, isDelete]);

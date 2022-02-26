@@ -22,7 +22,8 @@ const useSignMethod = () => {
       .then((result) => {
         // history.push(redirect_uri);
         // fetch(`https://light-wars.herokuapp.com/users`, {
-        fetch(`http://localhost:5000/users`, {
+        // fetch(`http://localhost:5000/users`, {
+        fetch(`https://wellness-merchandise-shop.herokuapp.com/users`, {
           method: "PUT",
           headers: {
             "content-type": "application/json",
@@ -108,7 +109,8 @@ const useSignMethod = () => {
         auth.currentUser.displayName = fullName;
 
         // fetch(`https://light-wars.herokuapp.com/users`, {
-        fetch(`http://localhost:5000/users`, {
+        // fetch(`http://localhost:5000/users`, {
+        fetch(`https://wellness-merchandise-shop.herokuapp.com/users`, {
           method: "PUT",
           headers: {
             "content-type": "application/json",
